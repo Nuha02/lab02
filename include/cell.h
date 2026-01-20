@@ -1,6 +1,6 @@
 /**
  * CSC232 - Data Structures
- * Missouri State University, Fall 2025
+ * Missouri State University, Spring 2026
  *
  * @file    cell.h
  * @author  Jim Daehn <jdaehn@missouristate.edu>
@@ -19,7 +19,7 @@
  */
 namespace csc232
 {
-    template < typename Object >
+    template < typename object >
     class cell
     {
     public:
