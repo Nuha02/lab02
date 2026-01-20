@@ -39,7 +39,6 @@ namespace csc232
 
     private:
         // TODO: Task 2 - Step 6: Declare data member
-
     };
 
 } // csc232

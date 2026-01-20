@@ -65,9 +65,8 @@ TEST_F( Task1TestFixture, ItDeclaresWriteMethod )
 {
     // Using static_assert means that if student hasn't declared the read method properly,
     // this test target won't even compile.
-    static_assert(csc232::HasWriteMethod< int, csc232::cell< int > >,
-        "csc232::cell< T > must declare a method: void write( const T& )"
-    );
+    static_assert( csc232::HasWriteMethod< int, csc232::cell< int > >,
+                   "csc232::cell< T > must declare a method: void write( const T& )" );
 }
 
 TEST_F( Task1TestFixture, ItDeclaresVirtualWriteMethod )
@@ -117,12 +116,10 @@ auto contains_method( const std::string &fileContent, const std::string &methodN
 
     // build pattern: optional leading return type OR optional trailing return type
     std::regex pattern(
-        std::string(R"((?:([\w:<>\s*&]+)\s+)?)")    // optional leading return type
-      + method_name
-      + R"(\s*\([^;{)]*\)\s*)"                     // parameter list
-        R"((?:->\s*([\w:<>\s*&:<>\s]+)\s*)?)"      // optional trailing return type
-      + R"((?:const\b)?\s*(?:noexcept\b(?:\([^)]*\))?\s*)?(?:&{1,2})?\s*(?:override\b)?\s*(?:=\s*(?:default|0))?\s*;)"
-    );
+        std::string( R"((?:([\w:<>\s*&]+)\s+)?)" )            // optional leading return type
+        + method_name + R"(\s*\([^;{)]*\)\s*)"                // parameter list
+                        R"((?:->\s*([\w:<>\s*&:<>\s]+)\s*)?)" // optional trailing return type
+        + R"((?:const\b)?\s*(?:noexcept\b(?:\([^)]*\))?\s*)?(?:&{1,2})?\s*(?:override\b)?\s*(?:=\s*(?:default|0))?\s*;)" );
     return std::regex_search( fileContent, pattern );
 }
 

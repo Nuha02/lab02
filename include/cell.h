@@ -30,7 +30,6 @@ namespace csc232
         // TODO: Task 1 - Step 3: Declare the read() pure virtual member function (accessor method)
 
         // TODO: Task 1 - Step 4: Declare the write() pure virtual member function (mutator method)
-
     };
 }
 

@@ -21,5 +21,4 @@ namespace csc232
 
     // TODO: Task 3 - Step 4: Implement the write() method
 
-
 } // csc232
