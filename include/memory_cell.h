@@ -46,14 +46,14 @@ namespace csc232
          */
         auto read( ) const -> object override;
 
-                /**
+        /**
          * @copydoc cell::write
          */
         auto write( const object &value ) -> void override;
 
     private:
         // TODO: Task 2 - Step 6: Declare data member
-        object item;
+        object value_;
     };
 
 } // csc232
